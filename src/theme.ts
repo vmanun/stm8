@@ -3,6 +3,15 @@ import { mode } from "@chakra-ui/theme-tools"
 
 export const theme = extendTheme({
     components: {
+        TopNavBar: {
+            baseStyle: {
+                padding: "5px 20px",
+                alignItems: "center",
+                justifyContent: "space-between",
+                color: "gray.100",
+                bg: "gray.800",
+            }
+        },
         IconButton: {
             baseStyle: {
                 color: "gray.800",
@@ -13,6 +22,7 @@ export const theme = extendTheme({
         SearchBar: {
             baseStyle: {
                 bg: "gray.700",
+                borderRadius:"10px",
                 _placeholder: {
                     color: "gray.400",
                 },

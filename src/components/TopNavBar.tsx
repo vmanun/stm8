@@ -1,7 +1,6 @@
 import React from "react";
 import {
   Flex,
-  HTMLChakraProps,
   IconButton,
   Input,
   InputGroup,
@@ -14,30 +13,21 @@ import { MdAccountCircle } from "react-icons/md";
 
 import { Logo } from "./Logo";
 
-const style: Record<string, HTMLChakraProps<any>> = {
-  nav: {
-    padding: "5px 20px",
-    alignItems: "center",
-    justifyContent: "space-between",
-    color: "gray.100",
-    bg: "gray.800",
-  },
-};
-
 const TopNavBar = ({ ...props }) => {
   const iconButtonStyles = useStyleConfig("IconButton");
   const searchBarStyles = useStyleConfig("SearchBar");
+  const navBarStyles = useStyleConfig("TopNavBar");
 
   return (
-    <Flex as="nav" {...style.nav}>
+    <Flex as="nav" sx={navBarStyles}>
       <Logo />
-      <InputGroup maxWidth="200px" variant="filled" size="sm">
+      <InputGroup width="44%" maxWidth="500px" variant="filled" size="sm">
         <Input placeholder="Search tasks" sx={searchBarStyles} />
         <InputRightElement>
           <SearchIcon />
         </InputRightElement>
       </InputGroup>
-      <Flex justifyContent="space-between" width="85px">
+      <Flex justifyContent="space-between" width="26%" maxWidth="100px">
         <Link href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" isExternal>
           <IconButton
             icon={<MoonIcon />}
