@@ -1,5 +1,5 @@
 import React from "react";
-import { Flex, InputGroup, InputRightElement, Link } from "@chakra-ui/react";
+import { Flex, InputGroup, InputRightElement } from "@chakra-ui/react";
 import { MoonIcon, SearchIcon } from "@chakra-ui/icons";
 import { MdAccountCircle } from "react-icons/md";
 
@@ -18,7 +18,7 @@ const styles: ScopedStyleSheet = {
   },
 };
 
-const TopNavBar = ({ ...props }) => {
+const TopNavBar = () => {
   return (
     <Flex as="nav" sx={styles.topNavBar}>
       <Logo />
@@ -29,12 +29,11 @@ const TopNavBar = ({ ...props }) => {
         </InputRightElement>
       </InputGroup>
       <Flex justifyContent="space-between" width="26%" maxWidth="100px">
-        <Link href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" isExternal>
-          <RoundedIconButton
-            icon={<MoonIcon />}
-            aria-label="Turn off dark mode"
-          />
-        </Link>
+        <RoundedIconButton
+          href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+          icon={<MoonIcon />}
+          aria-label="Turn off dark mode"
+        />
         <RoundedIconButton
           icon={<MdAccountCircle size="25" />}
           aria-label="See your profile"
