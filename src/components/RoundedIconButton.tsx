@@ -1,12 +1,11 @@
 import React from "react";
 import { IconButton, Link, useStyleConfig } from "@chakra-ui/react";
+import { ComponentProperties } from "../declarations";
 
 export default function RoundedIconButton({
   href,
   ...props
-}: {
-  [p: string]: any;
-}) {
+}: ComponentProperties) {
   const innerIconButton = (
     <IconButton
       {...props}
