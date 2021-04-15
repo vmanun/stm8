@@ -1,11 +1,19 @@
 import React from "react";
-import { IconButton, Link, useStyleConfig } from "@chakra-ui/react";
-import { ComponentProperties } from "../declarations";
+import {
+  IconButton,
+  IconButtonProps,
+  Link,
+  useStyleConfig,
+} from "@chakra-ui/react";
+
+type RoundedIconButtonProps = {
+  href?: URL;
+} & IconButtonProps;
 
 export default function RoundedIconButton({
   href,
   ...props
-}: ComponentProperties) {
+}: RoundedIconButtonProps) {
   const innerIconButton = (
     <IconButton
       {...props}
@@ -14,8 +22,8 @@ export default function RoundedIconButton({
       aria-label="Turn off dark mode"
     />
   );
-  return href && new URL(href) ? (
-    <Link href={href} isExternal>
+  return href ? (
+    <Link href={href.toString()} isExternal>
       {innerIconButton}
     </Link>
   ) : (

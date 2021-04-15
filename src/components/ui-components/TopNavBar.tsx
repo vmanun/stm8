@@ -6,7 +6,7 @@ import { MdAccountCircle } from "react-icons/md";
 import { Logo } from "./Logo";
 import TextInput from "./TextInput";
 import RoundedIconButton from "./RoundedIconButton";
-import { ScopedStyleSheet } from "../declarations";
+import { ScopedStyleSheet } from "../../declarations";
 
 const styles: ScopedStyleSheet = {
   topNavBar: {
@@ -30,7 +30,7 @@ const TopNavBar = () => {
       </InputGroup>
       <Flex justifyContent="space-between" width="26%" maxWidth="100px">
         <RoundedIconButton
-          href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+          href={new URL("https://www.youtube.com/watch?v=dQw4w9WgXcQ")}
           icon={<MoonIcon />}
           aria-label="Turn off dark mode"
         />
