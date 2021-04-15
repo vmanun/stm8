@@ -18,6 +18,7 @@ export default function TasksList() {
   return (
     <Box>
       {tasks.map((task) => (
+        //TODO: Create a proper task component
         <div key={task.id}>
           <h1>{task.id}</h1>
           <h1>{task.link.toString()}</h1>
