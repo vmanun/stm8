@@ -5,7 +5,7 @@ import { mockedTasks } from "../../mocks/data/tasks";
 
 //TODO: Stylize
 export default function TasksList() {
-  const [tasks, setTasks]: [Task[], any] = useState([]);
+  const [tasks, setTasks] = useState<Task[]>([]);
 
   useEffect(() => {
     (async () => {
