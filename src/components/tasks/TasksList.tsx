@@ -1,7 +1,10 @@
-import { Box, Heading } from "@chakra-ui/react";
 import React, { useEffect, useState } from "react";
-import { SerializedTask, Task } from "../../models/Task.d";
+
+import { Wrap, WrapItem } from "@chakra-ui/react";
+
+import { SerializedTask, Task } from "../../models/Task";
 import { mockedTasks } from "../../mocks/data/tasks";
+import TaskCard from "./TaskCard";
 
 //TODO: Stylize
 export default function TasksList() {
@@ -16,15 +19,12 @@ export default function TasksList() {
   }, []);
 
   return (
-    <Box>
+    <Wrap spacing="15px" align="center" justify="center">
       {tasks.map((task) => (
-        //TODO: Create a proper task component
-        <div key={task.id}>
-          <h1>{task.id}</h1>
-          <h1>{task.link.toString()}</h1>
-          <h1>{task.title}</h1>
-        </div>
+        <WrapItem key={task.id}>
+          <TaskCard data={task} />
+        </WrapItem>
       ))}
-    </Box>
+    </Wrap>
   );
 }
