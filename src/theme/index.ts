@@ -17,4 +17,7 @@ export const theme = extendTheme({
       },
     }),
   },
+  colors: {
+    primary: "gray.800",
+  },
 });

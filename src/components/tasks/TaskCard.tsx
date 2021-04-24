@@ -2,13 +2,13 @@ import React from "react";
 
 import { Box } from "@chakra-ui/layout";
 
-import { Task } from "../../models/Task";
+import { Task } from "../../types/Task";
 
-interface TaskProps extends React.ComponentProps<typeof Box> {
+interface ITaskProps extends React.ComponentProps<typeof Box> {
   data: Task;
 }
 
-export default function TaskCard({ data }: TaskProps) {
+export default function TaskCard({ data }: ITaskProps) {
   return (
     <Box w={{ sm: 250, lg: 350, xl: 500 }} height="100px" bg="blue.500">
       <h1>{data.id}</h1>
